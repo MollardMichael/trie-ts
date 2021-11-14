@@ -20,13 +20,13 @@
     "listFiles": false,
     "pretty": true,
     "lib": ["es2017"],
-    "types": [],
+    "types": ["node"],
     "typeRoots": ["node_modules/@types", "src/types"]
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules/**"],
   "compileOnSave": false,
   "typedocOptions": {
-    "entryPoints": ["./src/lib/trie.ts"]
+    "entryPoints": ["./src", "./src/lib/pipeable.ts"]
   }
 }
