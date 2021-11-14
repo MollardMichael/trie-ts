@@ -18,6 +18,7 @@
     "libauth",
     "mkdir",
     "prettierignore",
+    "pipeable",
     "sandboxed",
     "transpiled",
     "typedoc",

@@ -21,7 +21,7 @@ export type Trie = { children: Record<string, Trie> } & (
  */
 type MakeTrieFromList = (words: string[]) => Trie;
 /**
- * Create a Trie from a infinite number of arguments
+ * Create a Trie from function argument list
  */
 type TrieOfWords = (...words: string[]) => Trie;
 /**
