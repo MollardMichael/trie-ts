@@ -1,5 +1,9 @@
 # trie-ts
 
+![license](https://img.shields.io/github/license/MollardMichael/trie-ts.svg)
+[![codecov](https://codecov.io/gh/MollardMichael/trie-ts/branch/master/graph/badge.svg?token=OI6LKGG1R7)](https://codecov.io/gh/MollardMichael/trie-ts)
+![Build Status](https://github.com/MollardMichael/trie-ts/actions/workflows/push.yml/badge.svg)
+
 This repository is yet another implementation of a trie in full typescript with a functional approach.
 
 A Trie is a Tree Data structure that usually stores characters arrays in a way that makes it easy to perform prefix searches.
