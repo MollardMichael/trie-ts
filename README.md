@@ -1,4 +1,4 @@
-# trie-js
+# trie-ts
 
 This repository is yet another implementation of a trie in full typescript with a functional approach.
 This implementation favor time complexity over space complexity by storing a bit more information than necessary in each node.
@@ -25,13 +25,13 @@ Using this library, you'll be able to gain performance that will outshine a simp
 ### Using NPM
 
 ```shell
-npm install trie-js
+npm install trie-ts
 ```
 
 ### Using Yarn
 
 ```shell
-yarn add trie-js
+yarn add trie-ts
 ```
 
 ## API
@@ -40,7 +40,7 @@ This library expose two APIs.
 
 ### Base API
 
-The first one is available [here](https://mollardmichael.github.io/trie-js/modules/index.html) and consist of the following functions
+The first one is available [here](https://mollardmichael.github.io/trie-ts/modules/index.html) and consist of the following functions
 
 ```typescript
 /**
@@ -78,7 +78,7 @@ type HasPrefix = (word: string, trie: Trie) => boolean;
 If you are using a library such as fp-ts or any other that allow you to use a "pipe" util, you'll be able to use the second version of the api with a syntax that looks like that
 
 ```typescript
-import { add, emptyTrie } from 'trie-js/lib/pipeable';
+import { add, emptyTrie } from 'trie-ts/lib/pipeable';
 
 pipe(
   emptyTrie,

@@ -50,7 +50,7 @@ type HasPrefix = (word: string, trie: Trie) => boolean;
  *
  * ### Example
  * ```typescript
- * import { emptyTrie } from 'trie-js';
+ * import { emptyTrie } from 'trie-ts';
  * const trie = add("word", emptyTrie);
  * ```
  */
@@ -65,7 +65,7 @@ export const emptyTrie: Trie = {
  *
  * ### Example
  * ```typescript
- * import { fromList } from 'trie-js';
+ * import { fromList } from 'trie-ts';
  * const trie = fromList(["word", "hello"]);
  * ```
  *
@@ -84,7 +84,7 @@ export const fromList: MakeTrieFromList = (words) => {
  *
  * ### Example
  * ```typescript
- * import { of } from 'trie-js';
+ * import { of } from 'trie-ts';
  * const trie = of("word", "hello");
  * ```
  *
@@ -103,7 +103,7 @@ export const of: TrieOfWords = (firstWord: string, ...words) => {
  *
  * ### Example
  * ```typescript
- * import { add, emptyTrie } from 'trie-js';
+ * import { add, emptyTrie } from 'trie-ts';
  * const trie = add("word", emptyTrie);
  * ```
  *
@@ -144,7 +144,7 @@ export const add: AddToTrie = (word, trie) => {
  *
  * ### Example
  * ```typescript
- * import { remove, emptyTrie } from 'trie-js';
+ * import { remove, emptyTrie } from 'trie-ts';
  * const trie = remove("word", emptyTrie);
  * ```
  *
@@ -214,7 +214,7 @@ export const remove: RemoveFromTrie = (word, trie) => {
  *
  * ### Example
  * ```typescript
- * import { add, search, of } from 'trie-js';
+ * import { add, search, of } from 'trie-ts';
  * const trie = of("hello", "hello world", "world");
  *
  * const result = search("hello", trie);
@@ -242,7 +242,7 @@ export const search: SearchPrefix = (query, trie) => {
  *
  * ### Example
  * ```typescript
- * import { add, has, of } from 'trie-js';
+ * import { add, has, of } from 'trie-ts';
  * const trie = of("hello", "world");
  *
  * has("hello", trie); // true
@@ -273,7 +273,7 @@ export const has: HasWord = (word, trie) => {
  *
  * ### Example
  * ```typescript
- * import { add, hasPrefix, of } from 'trie-js';
+ * import { add, hasPrefix, of } from 'trie-ts';
  * let trie = of("hello", "world");
  *
  * hasPrefix("hello", trie); // true
