@@ -25,13 +25,13 @@ Using this library, you'll be able to gain performance that will outshine a simp
 ### Using NPM
 
 ```shell
-npm install trie-ts
+npm install @micham/trie-ts
 ```
 
 ### Using Yarn
 
 ```shell
-yarn add trie-ts
+yarn add @micham/trie-ts
 ```
 
 ## API
@@ -78,7 +78,7 @@ type HasPrefix = (word: string, trie: Trie) => boolean;
 If you are using a library such as fp-ts or any other that allow you to use a "pipe" util, you'll be able to use the second version of the api with a syntax that looks like that
 
 ```typescript
-import { add, emptyTrie } from 'trie-ts/lib/pipeable';
+import { add, emptyTrie } from '@micham/trie-ts/lib/pipeable';
 
 pipe(
   emptyTrie,

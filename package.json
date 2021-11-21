@@ -1,5 +1,5 @@
 {
-  "name": "trie-ts",
+  "name": "@micham/trie-ts",
   "version": "0.0.2",
   "description": "Implementation of trie with search and hasPrefix",
   "main": "build/main/index.js",
