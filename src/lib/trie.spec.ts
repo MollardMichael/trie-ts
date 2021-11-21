@@ -83,6 +83,20 @@ test('delete from single word Trie', (t) => {
   t.deepEqual(trie, of('hello world'), 'initial trie has not been modified');
 });
 
+test('delete empty string from Trie', (t) => {
+  const trie = of('hello world');
+  const removedTrie = remove('', trie);
+
+  t.deepEqual(removedTrie, trie, 'trie has been modified');
+});
+
+test('delete unknown word from Trie', (t) => {
+  const trie = of('hello world');
+  const removedTrie = remove('hello world 2', trie);
+
+  t.deepEqual(removedTrie, trie, 'trie has been modified');
+});
+
 test('delete word with no children', (t) => {
   const trie = of('a', 'aa', 'b', 'bbb');
 
