@@ -6,6 +6,15 @@
 
 This repository is yet another implementation of a trie in full typescript with a functional approach.
 
+## Why should I use this library?
+
+At the time I created this lib, I could not find a javascript implementation of a trie that satisfied those criteria:
+
+- Written in typescript (fully typed) for seamless integration in typescript based applications and libraries
+- Provided both a search and a hasPrefix functionality
+
+## A Trie ?
+
 A Trie is a Tree Data structure that usually stores characters arrays in a way that makes it easy to perform prefix searches.
 
 Example of a trie taken from [Wikipedia](https://en.wikipedia.org/wiki/Trie)
