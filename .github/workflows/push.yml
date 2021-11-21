@@ -26,6 +26,8 @@ jobs:
         run: npm install
       - name: Run tests
         run: npm run test
+      - name: Generate coverage
+        run: npm run cov:lcov
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v2
