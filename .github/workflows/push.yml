@@ -1,6 +1,6 @@
 name: Tests
 on:
-  pull_request:
+  push:
     branches:
       - master
 jobs:
@@ -27,3 +27,9 @@ jobs:
       - name: Run tests
         run: npm run test
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          directory: ./coverage/
+          fail_ci_if_error: true
+          verbose: true
