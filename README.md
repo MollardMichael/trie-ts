@@ -1,13 +1,19 @@
 # trie-ts
 
 This repository is yet another implementation of a trie in full typescript with a functional approach.
-This implementation favor time complexity over space complexity by storing a bit more information than necessary in each node.
 
-A Trie is a Tree Data structure that usually store characters arrays in a way that makes it easy to perform prefix searches.
+A Trie is a Tree Data structure that usually stores characters arrays in a way that makes it easy to perform prefix searches.
 
 Example of a trie taken from [Wikipedia](https://en.wikipedia.org/wiki/Trie)
 
 ![picture of trie](https://upload.wikimedia.org/wikipedia/commons/b/be/Trie_example.svg)
+
+Some implementation details:
+
+- All functions are pure
+- No functions mutate the input
+- The trie is implemented using a javascript record type. There is no limit on the alphabet you can use
+- A radix trie wasn't used (this could be improved to save on spatial complexity)
 
 ## Use cases
 
@@ -35,6 +41,32 @@ yarn add @micham/trie-ts
 ```
 
 ## API
+
+### Usage
+
+#### Check that if a word is a prefix of a word present in a known text
+
+```typescript
+import { fromList, search } from '@micham/trie-ts';
+const text =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus semper leo id egestas. Curabitur sed mauris in diam pellentesque blandit vitae ut lacus. Praesent cursus enim sed commodo ornare. Phasellus justo ligula, accumsan sit amet ullamcorper id, pellentesque et elit. Etiam et ante metus. Maecenas porttitor sem ligula. Proin mattis ullamcorper augue. Vestibulum elementum lacus porta varius ultricies. Ut et mattis nisi, nec venenatis enim';
+
+const trie = fromList(text.split(''));
+
+search('ullam', trie).length > 0; // true
+search('not in text', trie).length > 0; // false
+```
+
+#### Check is a word startWith a specific sequence of char
+
+```typescript
+import { of, hasPrefix } from '@micham/trie-ts';
+const trie = of('secret', 'token', 'jwt');
+
+hasPrefix('secret-text', trie); // true
+hasPrefix('my-secret', trie); // true
+hasPrefix('jwt', trie); // true
+```
 
 This library expose two APIs.
 
@@ -75,7 +107,9 @@ type HasPrefix = (word: string, trie: Trie) => boolean;
 
 ### Pipe-able API
 
-If you are using a library such as fp-ts or any other that allow you to use a "pipe" util, you'll be able to use the second version of the api with a syntax that looks like that
+[Documentation](https://mollardmichael.github.io/trie-ts/modules/lib_pipeable.html)
+
+If you are using a library such as fp-ts or any other that allow you to use a "pipe" util, you'll be able to use the second version of the api with a syntax that looks like what you can see below
 
 ```typescript
 import { add, emptyTrie } from '@micham/trie-ts/lib/pipeable';
