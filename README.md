@@ -48,12 +48,12 @@ yarn add @micham/trie-ts
 
 ```typescript
 import { fromList, search } from '@micham/trie-ts';
-const text =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus semper leo id egestas. Curabitur sed mauris in diam pellentesque blandit vitae ut lacus. Praesent cursus enim sed commodo ornare. Phasellus justo ligula, accumsan sit amet ullamcorper id, pellentesque et elit. Etiam et ante metus. Maecenas porttitor sem ligula. Proin mattis ullamcorper augue. Vestibulum elementum lacus porta varius ultricies. Ut et mattis nisi, nec venenatis enim';
+// cspell:disable-next
+const text = 'Lorem ipsum dolor sit';
 
 const trie = fromList(text.split(''));
 
-search('ullam', trie).length > 0; // true
+search('ip', trie).length > 0; // true
 search('not in text', trie).length > 0; // false
 ```
 
